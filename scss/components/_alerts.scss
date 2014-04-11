@@ -1,0 +1,63 @@
+
+$alert--positive-background: 	$positive-color;
+$alert--negative-background: 	$negative-color;
+$alert--info-background: 		$info-color;
+$alert--warning-background: 	$warning-color;
+
+$alert-text-color: 				#fff;
+$alert-padding: 				halve($base-spacing-unit);
+
+
+.alert,
+%alert {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	color: $alert-text-color;
+	&:hover {
+		.alert__close { opacity: 1; }
+	}
+}
+
+.alert--positive,
+%alert--positive {
+	background: $alert--positive-background;
+}
+
+.alert--negative,
+%alert--negative {
+	background: $alert--negative-background;
+}
+
+.alert--warning,
+%alert--warning {
+	background: $alert--warning-background;
+}
+
+.alert--info,
+%alert--info {
+	background: $alert--info-background;
+}
+
+
+	.alert__body,
+	%alert__body {
+		padding: $alert-padding;
+	}
+
+	.alert__icon,
+	%alert__icon {
+		@extend %alert__body;
+		text-align: center;
+		background-color: rgba(black, .2);
+	}
+
+	.alert__close,
+	%alert__close {
+		@extend %transition;
+		position: absolute;
+		top: $alert-padding;
+		right: $alert-padding;
+		opacity: 0;
+		&, &:hover { color: inherit; }
+	}
