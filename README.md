@@ -1,4 +1,4 @@
 inuit-components
 ================
 
-UI Components built for use with InuitCSS
+Coming soon! [@kraftcss](https://github.com/kraftcss)
